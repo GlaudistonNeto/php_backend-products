@@ -3,8 +3,7 @@
 // route collection
 $routes = [
     'home' => 'main@index',
-    'store' => 'main@store',
-    'cart' => 'store@cart'
+    'store' => 'main@store'
 ];
 
 // set default action
@@ -14,7 +13,6 @@ $action = 'home';
 if (isset($_GET['a'])) {
 
     // check if the action exists in the routes
-
     if(!key_exists($_GET['a'], $routes)){
         $action = 'home';
     } else {
