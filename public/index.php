@@ -1,10 +1,9 @@
 <?php
 
-use core\classes\Database;
-use core\classes\Functions;
-
-// open session
+// abrir a sessao
 session_start();
+
+use core\classes\Database;
 
 // load the config
 require_once('../config.php');
@@ -12,17 +11,7 @@ require_once('../config.php');
 // load all project classes
 require_once('../vendor/autoload.php');
 
-$a = new Database();
-$b = new Functions();
-
-$b->teste();
-
-echo 'OK';
-/* 
-load the config
-load the class
-load the route system
-    - show store
-    - show cart
-    - show the backoffice, etc
-*/
+$bd = new Database();
+$clients = $bd->select("SELECT * FROM clients");
+echo '<pre>';
+print_r($clients);
