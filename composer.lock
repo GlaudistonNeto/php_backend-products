@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "ee030c1275006fb48924d10bd5340a0c",
+=======
+    "content-hash": "86162c1b7e88a32470242a2d1bb297fc",
+>>>>>>> 9d367a531177c500512c5f8f6995b031a4cddc09
     "packages": [],
     "packages-dev": [],
     "aliases": [],
@@ -14,5 +18,9 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+<<<<<<< HEAD
     "plugin-api-version": "2.0.0"
+=======
+    "plugin-api-version": "2.3.0"
+>>>>>>> 9d367a531177c500512c5f8f6995b031a4cddc09
 }
