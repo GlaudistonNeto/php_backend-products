@@ -1,0 +1,20 @@
+{
+    "name": "scandiweb/phpstore",
+    "description": "Online Store in PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "GlaudistonNeto",
+            "email": "glsudistonson@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\" : "core/"
+        },
+        "files": [
+            "config.php"
+        ]
+    }
+}
