@@ -1,10 +1,10 @@
 <?php
 
-// abrir a sessao
+// open the session
 session_start();
 
-// carrega todas as classes do projeto
+// load all project classes
 require_once('../vendor/autoload.php');
 
-// carrega o sistema de rotas
-require_once('../core/rotas.php');
+// load the route system
+require_once('../core/routes.php');
