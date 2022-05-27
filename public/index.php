@@ -1,16 +1,10 @@
 <?php
 
-// open the session
-
-use core\classes\Database;
-
+// abrir a sessao
 session_start();
 
-// load the config
-require_once('../config.php');
-
-// load all project classes
+// carrega todas as classes do projeto
 require_once('../vendor/autoload.php');
 
-// load the route system
-require_once('../core/routes.php');
+// carrega o sistema de rotas
+require_once('../core/rotas.php');

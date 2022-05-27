@@ -36,7 +36,7 @@ class Database{
     // ============================================================
     // CRUD
     // ============================================================
-    public function select($sql, $parameters = null){
+    public function select($sql, $parametros = null){
 
         // check if it's a SELECT statement
         if(!preg_match("/^SELECT/i", $sql)){
