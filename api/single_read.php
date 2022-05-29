@@ -26,6 +26,6 @@ if($item->name != null){
     echo json_encode($emp_arr);
 } else {
     http_response_code(404);
-    echo json_encode("Employee not found.");
+    echo json_encode("Product not found.");
 }
 ?>

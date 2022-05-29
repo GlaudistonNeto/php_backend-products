@@ -14,9 +14,4 @@ $item = new Products($db);
 $item->name = $_GET['name'];
 $item->price = $_GET['price'];
 $item->created = date('Y-m-d H:i:s');
-if($item->createProducts()) {
-    echo 'Product created successfully.';
-} else {
-    echo 'Product could not be created.';
-}
 ?>

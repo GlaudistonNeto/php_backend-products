@@ -13,10 +13,4 @@ $db = $database->getConnection();
 $item = new Products($db);
 
 $item->id = isset($_GET['id']) ? $_GET['id'] : die();
-
-if($item->deleteProduct()) {
-    echo json_encode("Employee deleted.");
-} else {
-    echo json_encode("Data could not be deleted");
-}
 ?>

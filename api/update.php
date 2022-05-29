@@ -17,9 +17,4 @@ $item->id = isset($_GET['id']) ? $_GET['id'] : die();
 $item->name = $_GET['name'];
 $item->price = $_GET['price'];
 $item->created = date('Y-m-d H:i:s');
-if($item->updateProduct()) {
-    echo json_encode("Product data updated.");
-} else {
-    echo json_encode("Data could not be updated");
-}
 ?>
