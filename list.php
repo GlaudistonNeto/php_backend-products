@@ -37,11 +37,10 @@
                     $price = $getting_products['price'];
             ?>
             <tr> <!-- showing and editing values -->
-            <form action="edit.php" method="POST" enctype="multipart/form-data">
-                    <td><img src="<?php echo $link_imagem; ?>" width="150"></td>
-                    <td class=""><input type="text" name ="name" value="<?php echo $name; ?>"></td>
-                    <td class=""><input type="text" name ="price" value="<?php echo $price; ?>"></td>
-                    <td class="">
+            <form action="edit.php" method="POST">
+                    <td><input type="text" name ="name" value="<?php echo $name; ?>"></td>
+                    <td><input type="text" name ="price" value="<?php echo $price; ?>"></td>
+                    <td>
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <input type="submit" value="edit">
                     </td>
