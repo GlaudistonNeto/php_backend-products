@@ -10,11 +10,11 @@ $price = $_POST['price'];
 
 // insert data on products table
 $receives_products = "UPDATE tb_products
-SET name = '$name', price '$price'
-WHERE id = $id'";
+SET name = '$name', price = '$price'
+WHERE id = '$id' ";
 
 // validates connection
-$query_products = mysqli_query($connection, $receives_products);
+$query_products = mysqli_query($connection, $receives_products) or die(mysqli_error($connection));
 
 // goes back to previous page
 header('location: list.php');

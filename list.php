@@ -36,19 +36,24 @@
                     $name = $getting_products['name'];
                     $price = $getting_products['price'];
             ?>
-            <tr> <!-- showing and editing values -->
-            <form action="edit.php" method="POST">
-                    <td><input type="text" name ="name" value="<?php echo $name; ?>"></td>
-                    <td><input type="text" name ="price" value="<?php echo $price; ?>"></td>
-                    <td>
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <input type="submit" value="edit">
-                    </td>
-                </form>
+            <tr>
+                <td scope="row"><?php echo $id?></td>
+                <td><?php echo $name?></td>
+                <td><?php echo $price?></td>
+                <td> <!-- EDITING values -->
+                    <form action="edit.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $getting_products['id']; ?>">
+
+                        <input type="text" name="name" value="<?php echo $getting_products['name'];?>">
+                        <input type="text" name="price" value="<?php echo $getting_products['price'];?>">
+                        <input type="submit" value="EDIT" class="btn btn-warning">
+                    </form>
+                </td>
+
                 <td> <!-- DELETING values -->
                     <form action="delete.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $id?>">
-                        <input type="submit" value="DELETE">
+                        <input type="submit" value="DELETE" class="btn btn-danger">
                     </form>
                 </td>
             </tr>
