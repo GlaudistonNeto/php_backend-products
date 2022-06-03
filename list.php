@@ -22,6 +22,7 @@
         <thead>
             <tr>
                 <th>id</th>
+                <th>Checkbox DELETE</th>
                 <th>name</th>
                 <th>price</th>
                 <th>EDIT</th>
@@ -38,6 +39,14 @@
             ?>
             <tr>
                 <td scope="row"><?php echo $id?></td>
+                <td>  <!-- DELETE CHECKBOX -->
+                    <form action="delete.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $id?>">
+                        <input type="checkbox" class="btn btn-danger">
+
+                        <input name="checkbox[]" type="checkbox" value="<?php echo $id; ?>"><!-- needs test -->
+                    </form>
+                </td>
                 <td><?php echo $name?></td>
                 <td><?php echo $price?></td>
                 <td> <!-- Showing values --> <!--  -->
