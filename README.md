@@ -1,2 +1,2 @@
 # php_backend-products
-a backend for a webapp to buy and add products
+A little store webapp to create new products add, delete, and edit them.

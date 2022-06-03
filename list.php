@@ -34,19 +34,15 @@
                 while($getting_products = mysqli_fetch_array($query_products)) {
                     $id = $getting_products['id'];
                     $name = $getting_products['name'];
-                    $price = $getting_products['price'];
+                    $price = '$: ' . $getting_products['price'];
             ?>
             <tr>
                 <td scope="row"><?php echo $id?></td>
                 <td><?php echo $name?></td>
                 <td><?php echo $price?></td>
-                <td> <!-- EDITING values -->
-                    <form action="edit.php" method="POST">
-                        <input type="hidden" name="id" value="<?php echo $getting_products['id']; ?>">
-
-                        <input type="text" name="name" value="<?php echo $getting_products['name'];?>">
-                        <input type="text" name="price" value="<?php echo $getting_products['price'];?>">
-                        <input type="submit" value="EDIT" class="btn btn-warning">
+                <td> <!-- Showing values --> <!--  -->
+                    <form action="http://localhost/edit.php">
+                        <button onclick="edit.php" type="submit">EDIT</button>
                     </form>
                 </td>
 
