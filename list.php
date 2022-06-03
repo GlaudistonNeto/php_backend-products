@@ -74,7 +74,7 @@
                     <tr>
                         <th>name</th>
                         <th>price</th>
-                        <th>attributes</th>
+                        <th>attributes (Mb or Kg or HxWxL)</th>
                     </tr>
                     <td><input type="text" name="name"></td>
                     <td><input type="real" name="price"></td>
