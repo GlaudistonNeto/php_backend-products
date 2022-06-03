@@ -30,10 +30,10 @@
   $query_products = mysqli_query($connection, $receives_products) or die(mysqli_error($connection));
   ?>
 
-<?php
-    $get_products = "SELECT * FROM tb_products ";
-    $query_products = mysqli_query($connection, $get_products);
-?>
+  <?php
+      $get_products = "SELECT * FROM tb_products ";
+      $query_products = mysqli_query($connection, $get_products);
+  ?>
       
     <!-- getting products to be shown on the html page -->
     <?php
@@ -58,6 +58,10 @@
             </td>
 
     <?php }; ?> <!-- closing while -->
+
+    <form action="http://localhost/list.php">
+        <button class="btn btn-success" onclick="list.php" type="submit">Back</button>
+    </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

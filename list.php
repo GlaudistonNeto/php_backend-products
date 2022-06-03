@@ -42,7 +42,7 @@
                 <td><?php echo $price?></td>
                 <td> <!-- Showing values --> <!--  -->
                     <form action="http://localhost/edit.php">
-                        <button onclick="edit.php" type="submit">EDIT</button>
+                        <button class="btn btn-warning" onclick="edit.php" type="submit">EDIT</button>
                     </form>
                 </td>
 
@@ -66,7 +66,7 @@
                     </tr>
                     <td><input type="text" name="name"></td>
                     <td><input type="real" name="price"></td>
-                    <td><input type="submit" value="Add_Product"></td>
+                    <td><input class="btn btn-primary" type="submit" value="Add Product"></td>
                 </form>
             </tr>
         </tbody>
