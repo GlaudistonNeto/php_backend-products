@@ -25,6 +25,7 @@
                 <th>Checkbox DELETE</th>
                 <th>name</th>
                 <th>price</th>
+                <th>specifications</th>
                 <th>EDIT</th>
                 <th>EXCLUDE</th>
             </tr>
@@ -36,20 +37,21 @@
                     $id = $getting_products['id'];
                     $name = $getting_products['name'];
                     $price = '$: ' . $getting_products['price'];
+                    $attributes = $getting_products['attributes'];
             ?>
             <tr>
                 <td scope="row"><?php echo $id?></td>
                 <td>  <!-- DELETE CHECKBOX -->
                     <form action="delete.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $id?>">
-                        <input type="checkbox" class="btn btn-danger">
 
-                        <input name="checkbox[]" type="checkbox" value="<?php echo $id; ?>"><!-- needs test -->
+                        <input class="btn btn-danger" name="checkbox[]" type="checkbox" value="<?php echo $id; ?>"><!-- not working -->
                     </form>
                 </td>
                 <td><?php echo $name?></td>
                 <td><?php echo $price?></td>
-                <td> <!-- Showing values --> <!--  -->
+                <td><?php echo $attributes?></td>
+                <td> <!-- Sendint to edit page --> <!--  -->
                     <form action="http://localhost/edit.php">
                         <button class="btn btn-warning" onclick="edit.php" type="submit">EDIT</button>
                     </form>
@@ -72,9 +74,11 @@
                     <tr>
                         <th>name</th>
                         <th>price</th>
+                        <th>attributes</th>
                     </tr>
                     <td><input type="text" name="name"></td>
                     <td><input type="real" name="price"></td>
+                    <td><input type="text" name="attributes"></td>
                     <td><input class="btn btn-primary" type="submit" value="Add Product"></td>
                 </form>
             </tr>
