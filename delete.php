@@ -3,6 +3,8 @@
 // open connection
 include 'connection.php';
 
+foreach ($_POST['checkbox'] as $checkbox) {}
+
 // receives typed data
 $id = $_POST['id'];
 

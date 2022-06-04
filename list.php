@@ -25,7 +25,7 @@
                 <th>DELETE</th>
                 <th>name</th>
                 <th>price</th>
-                <th>specifications</th>
+                <th>attributes</th>
             </tr>
         </thead>
         <tbody>
@@ -82,10 +82,8 @@
     </table>
     <!-- Sendint to edit page --> <!--  -->
     <div class="float-right">
-        <form action="http://localhost/edit.php">
-            <button class="btn btn-warning text-light"
-                    onclick="edit.php" type="submit"
-            >
+        <form action="editPage.php" method="POST">
+            <button class="btn btn-warning text-light" type="submit">
             Go to EDIT page
         </button>
         </form>
