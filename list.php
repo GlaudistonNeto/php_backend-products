@@ -9,6 +9,8 @@
 <html lang="en">
   <head>
     <title>Products</title>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="javascript.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="wpriceth=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,45 +24,77 @@
         <thead>
             <tr>
                 <th>SKU</th>
-                <th>DELETE</th>
+                <th> <!-- DELETING values -->
+                    <button type="submit" form="del-form" class="btn btn-danger">
+                        DELETE
+                    </button>
+                </th>
                 <th>name</th>
                 <th>price</th>
-                <th>attributes</th>
+                <th>dvd MB</th>
+                <tr>
+                    <td></td>                    
+                    <td></td>                    
+                    <td></td>                    
+                    <td></td>                    
+                    <th>book Kg</th>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>dimension height</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>dimension width</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>dimension lenght</th>
+                    </tr>
+                </tr>
             </tr>
         </thead>
+        <thead>
+            <form action="delete.php" id="del-form" method="post"> 
+        </thead>
         <tbody>
-            <td></td>
-            <td> <!-- DELETING values -->
-                <form action="delete.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $id?>">
-                    <input type="submit" value="DELETE" class="btn btn-danger">
-                </form>
-            </td>
-            <td></td>
-            <td></td>
             <!-- creating while instructions -->
             <?php
                 while($getting_products = mysqli_fetch_array($query_products)) {
                     $id = $getting_products['id'];
                     $name = $getting_products['name'];
                     $price = '$: ' . $getting_products['price'];
-                    $attributes = $getting_products['attributes'];
+                    $dvd = $getting_products['dvd'];
+                    $book = $getting_products['book'];
+                    $height = $getting_products['height'];
+                    $width = $getting_products['width'];
+                    $length = $getting_products['length'];
             ?>
             <tr>
                 <td scope="row"><?php echo $id?></td>
                 <td>  <!-- DELETE CHECKBOX -->
-                    <form action="delete.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $id?>">
-                        <input  class="btn btn-danger"
-                                name="checkbox[]"
-                                type="checkbox"
-                                value="<?php echo $id; ?>"
-                        ><!-- not working -->
-                    </form>
+                <form action="delete.php" method="POST">
+                <input
+                        type="checkbox"
+                        name="check_list[]"
+                        value="<?php echo $id?>"
+                >
                 </td>
                 <td><?php echo $name?></td>
                 <td><?php echo $price?></td>
-                <td><?php echo $attributes?></td>
+                <td><?php echo $dvd?></td>
+                <td><?php echo $book?></td>
+                <td><?php echo $height?></td>
+                <td><?php echo $width?></td>
+                <td><?php echo $length?></td>
             </tr>
 
             <?php }; ?> <!-- closing while -->
@@ -71,11 +105,28 @@
                 <tr>
                     <th>name</th>
                     <th>price</th>
-                    <th>attributes (Mb or Kg or HxWxL)</th>
+                    <th>type</th>
+                    <tr>
+                    <td><input type="text" name="name"></td>
+                    <td><input type="real" name="price"></td>
+                        <td>DVD</td>                                       
+                        <td><input type="text" name="dvd" placeholder="MB"></td>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Book</td>
+                            <td><input type="text" name="book" placeholder="Kg"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Dimentional product</td>                                                                   
+                            <td><input type="text" name="height" placeholder="height"></td>
+                            <td><input type="text" name="width" placeholder="width"></td>
+                            <td><input type="text" name="lenght" placeholder="lenght"></td>
+                        </tr>
+                    </tr>                    
                 </tr>
-                <td><input type="text" name="name"></td>
-                <td><input type="real" name="price"></td>
-                <td><input type="text" name="attributes"></td>
                 <td><input class="btn btn-primary" type="submit" value="Add Product"></td>
             </form>            
         </tbody>

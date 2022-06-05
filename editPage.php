@@ -26,7 +26,7 @@
             $price = '$: ' . $getting_products['price'];
         ?>
         <tr>
-            <td scope="row"><?php echo $getting_products['id']?></td>
+            <td scope="row"><?php echo $getting_products['id']; ?></td>
             <td><?php echo $name?></td>
             <td><?php echo $price?></td>
             <td> <!-- EDITING values -->

@@ -1,19 +1,17 @@
 <?php
+   // getting connection
+   include 'connection.php';
 
-// open connection
-include 'connection.php';
+   // receives typed data
+    $id = $_POST['id'];
 
-foreach ($_POST['checkbox'] as $checkbox) {}
+    // delete data on products table
+    foreach($_POST['check_list'] as $id)
+     {
+        $receives_products = "DELETE from tb_products WHERE id='$id'";
+        $query_products = mysqli_query($connection, $receives_products);
+     }
 
-// receives typed data
-$id = $_POST['id'];
-
-// delete data on products table
-$receives_products = "DELETE FROM tb_products WHERE id='$id'";
-
-// validates connection
-$query_products = mysqli_query($connection, $receives_products);
-
-// goes back to previous page
-header('location: list.php');
+     // goes back to previous page
+    header('Location: list.php');
 ?>
