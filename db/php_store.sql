@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `tb_products` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
   `price` decimal(20,2) NOT NULL DEFAULT '0.00',
-  `width` decimal(20,6) DEFAULT NULL,
+  `width` decimal(20,3) DEFAULT NULL,
   `height` decimal(20,2) DEFAULT NULL,
   `length` decimal(20,2) DEFAULT NULL,
   `dvd` decimal(20,3) DEFAULT NULL,
@@ -35,6 +35,8 @@ CREATE TABLE IF NOT EXISTS `tb_products` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Dumping data for table php_store.tb_products: ~2 rows (approximately)
+INSERT INTO `tb_products` (`id`, `name`, `price`, `width`, `height`, `length`, `dvd`, `book`) VALUES
+	(1, 'p1', 0.00, 1.200, 1.90, 0.78, 46.080, 4.000);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
