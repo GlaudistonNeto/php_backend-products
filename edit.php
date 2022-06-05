@@ -21,5 +21,5 @@ $query_products = mysqli_query($connection, $receives_products) or die(mysqli_er
     $query_products = mysqli_query($connection, $get_products);
 
     // goes back to previous page
-    header('location: list.php');
+    header('location: index.php');
 ?>

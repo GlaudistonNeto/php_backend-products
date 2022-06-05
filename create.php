@@ -16,5 +16,5 @@ VALUES (null, '$name', '$price')";
 $query_products = mysqli_query($connection, $receives_products);
 
 // goes back to previous page
-header('location: list.php');
+header('location: index.php');
 ?>

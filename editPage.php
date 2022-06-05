@@ -42,7 +42,7 @@
     <?php }; ?> <!-- closing while -->
     
     <!-- going back to list page -->
-    <form action="list.php" method="POST">
+    <form action="index.php" method="POST">
         <button class="btn btn-success" type="submit">Back</button>
     </form>
     <!-- Optional JavaScript -->

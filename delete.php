@@ -13,5 +13,5 @@
      }
 
      // goes back to previous page
-    header('Location: list.php');
+    header('Location: index.php');
 ?>
