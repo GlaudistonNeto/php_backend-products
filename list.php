@@ -43,21 +43,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <th>dimension height</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <th>dimension width</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <th>dimension lenght</th>
+                        <th>dimension height, width, and length</th>
                     </tr>
                 </tr>
             </tr>
@@ -90,11 +76,23 @@
                 </td>
                 <td><?php echo $name?></td>
                 <td><?php echo $price?></td>
-                <td><?php echo $dvd?></td>
-                <td><?php echo $book?></td>
-                <td><?php echo $height?></td>
-                <td><?php echo $width?></td>
-                <td><?php echo $length?></td>
+                <td><?php echo $dvd?> MB</td>
+                <tr>
+                    <td></td>                    
+                    <td></td>                    
+                    <td></td>                    
+                    <td></td>                    
+                    <td><?php echo $book?> kg</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><?php echo $height?>cm</td>
+                    <td><?php echo $width?>g</td>
+                    <td><?php echo $length?>cm</td>
+                </tr>
             </tr>
 
             <?php }; ?> <!-- closing while -->
