@@ -24,19 +24,20 @@ USE `php_store`;
 DROP TABLE IF EXISTS `tb_products`;
 CREATE TABLE IF NOT EXISTS `tb_products` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
-  `price` decimal(20,2) NOT NULL DEFAULT '0.00',
-  `width` decimal(20,3) DEFAULT NULL,
-  `height` decimal(20,2) DEFAULT NULL,
-  `length` decimal(20,2) DEFAULT NULL,
-  `dvd` decimal(20,3) DEFAULT NULL,
-  `book` decimal(20,3) DEFAULT NULL,
+  `name` varchar(50) COLLATE armscii8_bin NOT NULL,
+  `price` decimal(4,2) NOT NULL,
+  `width` int DEFAULT NULL,
+  `height` int DEFAULT NULL,
+  `length` int DEFAULT NULL,
+  `dvd` int DEFAULT NULL,
+  `book` decimal(4,1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dumping data for table php_store.tb_products: ~2 rows (approximately)
+-- Dumping data for table php_store.tb_products: ~0 rows (approximately)
 INSERT INTO `tb_products` (`id`, `name`, `price`, `width`, `height`, `length`, `dvd`, `book`) VALUES
-	(1, 'p1', 0.00, 1.200, 1.90, 0.78, 46.080, 4.000);
+	(1, 'prod_one', 1.99, 20, 15, 30, 4608, 2.5),
+	(2, 'prod_two', 0.92, 20, 40, 20, NULL, NULL);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
