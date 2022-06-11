@@ -71,6 +71,9 @@
                 <td><?php echo $book; ?>Kg</td>
             </tr>
             <?php }; ?> <!-- closing while statement -->
+            <td>
+                <hr>
+            </td>
             </form>
             <tr>
                 <form action="create.php" method="post">
@@ -84,8 +87,8 @@
                     <td><input type="text" name="name" placeholder="name"></td>
                     <td><input type="text" name="price" placeholder="price ($)"></td>
                     <td><input type="text" name="width" placeholder="width (cm)"></td>
-                    <td><input type="text" name="height" placeholder="name (cm)"></td>
-                    <td><input type="text" name="length" placeholder="height (cm)"></td>
+                    <td><input type="text" name="height" placeholder="height (cm)"></td>
+                    <td><input type="text" name="length" placeholder="length (cm)"></td>
                     <td><input type="text" name="dvd" placeholder="dvd (MB)"></td>
                     <td><input type="text" name="book" placeholder="book (Kg)"></td>
                     <td><input class="btn btn-success" type="submit" value="ADD"></td>
