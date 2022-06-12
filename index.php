@@ -20,7 +20,7 @@
       <table class="table">
         <thead>
             <tr>
-                <th>id</th>
+                <th>sku</th>
                 <th> <!-- DELETING values -->
                     <button type="submit" form="del-form" class="btn btn-danger">
                         DELETE
@@ -76,7 +76,7 @@
             </td>
             </form>
             <tr>
-                <form action="create.php" method="post">
+                <form id="product_form" action="create.php" method="post">
                     <td>
                         <p class="position-absolute text-primary text-uppercase float-left">
                             Add a product
@@ -84,13 +84,13 @@
                     </td>
                     <td></td>
                     <td></td>
-                    <td><input type="text" name="name" placeholder="name"></td>
-                    <td><input type="text" name="price" placeholder="price ($)"></td>
-                    <td><input type="text" name="width" placeholder="width (cm)"></td>
-                    <td><input type="text" name="height" placeholder="height (cm)"></td>
-                    <td><input type="text" name="length" placeholder="length (cm)"></td>
-                    <td><input type="text" name="dvd" placeholder="dvd (MB)"></td>
-                    <td><input type="text" name="book" placeholder="book (Kg)"></td>
+                    <td><input id="name" type="text" name="name" placeholder="name"></td>
+                    <td><input id="price" type="text" name="price" placeholder="price ($)"></td>
+                    <td><input id="productType" type="text" name="width" placeholder="width (cm)"></td>
+                    <td><input  id="productType" type="text" name="height" placeholder="height (cm)"></td>
+                    <td><input id="productType" type="text" name="length" placeholder="length (cm)"></td>
+                    <td><input id="productType" type="text" name="dvd" placeholder="dvd (MB)"></td>
+                    <td><input id="productType" type="text" name="book" placeholder="book (Kg)"></td>
                     <td><input class="btn btn-success" type="submit" value="ADD"></td>
                 </form>
             <!-- Sendint to edit page -->
