@@ -20,12 +20,11 @@ WHERE id = '$id' ";
 
 // validates connection
 $query_products = mysqli_query($conx, $receives_products) or die(mysqli_error($conx));
-?>
 
-<?php
+
     $get_products = "SELECT * FROM tb_products ";
     $query_products = mysqli_query($conx, $get_products);
 
     // goes back to previous page
-    header('location: index.php');
+    header('Location: index.php');
 ?>

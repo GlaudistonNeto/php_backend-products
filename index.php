@@ -22,7 +22,7 @@
             <tr>
                 <th>sku</th>
                 <th> <!-- DELETING values -->
-                    <button type="submit" form="del-form" class="btn btn-danger">
+                    <button type="submit" form="massDelete" class="btn btn-danger">
                         DELETE
                     </button>
                 </th>
@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <thead>
-            <form action="delete.php" id="del-form" method="post"> 
+            <form action="delete.php" id="massDelete" method="post"> 
         </thead>
         <tbody>
             <?php
