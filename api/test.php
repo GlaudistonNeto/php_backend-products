@@ -30,7 +30,7 @@ if (isset($_POST['name'])) {
   $length = addslashes($_POST['length']);
   $dvd = addslashes($_POST['dvd']);
   $book = addslashes($_POST['book']);
-  if (!emty($name) && !emty($price)) {
+  if (!empty($name) && !empty($price)) {
     if (!$par->registerProducts($name, $price, $width, $height, $length, $dvd,
         $book)) {
           echo "Email already registered!";
@@ -40,3 +40,23 @@ if (isset($_POST['name'])) {
   }
 }
 ?>
+
+<form method="POST">
+<h1>REGISTER A PRODUCT</h1>
+<label form="name">name</label>
+<input type="text" name="name">
+<label form="name">price</label>
+<input type="text" name="price">
+<label form="name">width</label>
+<input type="text" name="width">
+<label form="name">height</label>
+<input type="text" name="height">
+<label form="name">length</label>
+<input type="text" name="length">
+<label form="name">dvd</label>
+<input type="text" name="dvd">
+<label form="name">book</label>
+<input type="text" name="book">
+
+<input type="submit" value="REGISTER">
+</form>

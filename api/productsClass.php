@@ -29,8 +29,8 @@ Class Product{
                                     $dvd, $book) { # verify if the email is
                                                   # already registered
     $cmd = $this->pdo->prepare("SELECT id FROM tb_products WHERE 
-                                email = :email");
-    $cmd->bindValue(":email", $email);
+                                name = :name");
+    $cmd->bindValue(":name", $name);
     $cmd->execute();
     if ($cmd->rowCount() > 0) { # email already registered
       return false;
