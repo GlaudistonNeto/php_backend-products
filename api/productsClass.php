@@ -56,5 +56,18 @@ Class Product{
     $cmd->bindValue(":id",$id);
     $cmd->execute();
   }
+
+  # search for a person's data
+  public function getPersonData($id) {
+    $res = array();
+    $cmd = $this->pdo->prepare("SELECT * FROM tb_products WHERE id = :id");
+    $cmd->bindValue(":id",$id);
+    $cmd->execute();
+
+    $res = $cmd->fetch(PDO::FETCH_ASSOC);
+    return $res;
+  }
+  # update this person's data
+  public function updatePersonData() {}
 }
 ?>
