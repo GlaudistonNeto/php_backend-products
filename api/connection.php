@@ -8,7 +8,7 @@ try {
     # echo "Successfully connected";
 } catch (PDOException $err) {
     # echo "Error: Unsuccessful Connection" . $err->getMessage();
-} catch (PDOException $err) {
+} catch (Exception $err) {
     # echo "Error: Generic error" . $err->getMessage();
 }
 ?>
