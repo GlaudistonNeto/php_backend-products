@@ -23,5 +23,32 @@ Class Product{
     $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
     return $res;
   }
+
+  # function to register on the database
+  public function registerProducts($name, $price, $width, $height, $length,
+                                    $dvd, $book) { # verify if the email is
+                                                  # already registered
+    $cmd = $this->pdo->prepare("SELECT id FROM tb_products WHERE 
+                                email = :email");
+    $cmd->bindValue(":email", $email);
+    $cmd->execute();
+    if ($cmd->rowCount() > 0) { # email already registered
+      return false;
+    } else { # not registered
+      $cmd = $this->pdo->prepare("INSERT INTO tb_products (name, price,
+                                  width, height, length, dvd, book)
+                                VALUES (:name, :price, :width, :height, :length,
+                                    :dvd, :book)");
+      $cmd->bindValue(":name", $name);
+      $cmd->bindValue(":price", $price);
+      $cmd->bindValue(":width", $width);
+      $cmd->bindValue(":height", $height);
+      $cmd->bindValue(":length", $length);
+      $cmd->bindValue(":dvd", $dvd);
+      $cmd->bindValue(":book", $book);
+      $cmd->execute();
+      return true;
+    }
+  }
 }
 ?>
