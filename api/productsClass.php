@@ -50,5 +50,11 @@ Class Product{
       return true;
     }
   }
+  # exclude products
+  public function deleteProduct($id) {
+    $cmd = $this->pdo->prepare("DELETE FROM tb_products WHERE id = :id");
+    $cmd->bindValue(":id",$id);
+    $cmd->execute();
+  }
 }
 ?>

@@ -14,7 +14,7 @@ if (count ($data) > 0) {
       }
     }
   ?>
-    <td><a href="#">Edild</a><a href="#">Delete</a></td>
+    <td><a href="#">Edild</a><a href="test.php?id=<?php echo $data[$i]['id'];?>">Delete</a></td>
   <?php
   echo '</tr>';
   }
@@ -39,6 +39,17 @@ if (isset($_POST['name'])) {
     echo "You need to fill the product name and its price...";
   }
 }
+?>
+
+
+
+<?php
+  if (isset($_GET['id'])) {
+    $id_prod = addslashes($_GET['id']);
+    $par->deleteProduct($id_prod);
+
+    header("location: test.php");
+  }
 ?>
 
 <form method="POST">
