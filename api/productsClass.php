@@ -26,13 +26,13 @@ Class Product{
 
   # function to register on the database
   public function registerProducts($name, $price, $width, $height, $length,
-                                    $dvd, $book) { # verify if the email is
+                                    $dvd, $book) { # verify if the product is
                                                   # already registered
     $cmd = $this->pdo->prepare("SELECT id FROM tb_products WHERE 
                                 name = :name");
     $cmd->bindValue(":name", $name);
     $cmd->execute();
-    if ($cmd->rowCount() > 0) { # email already registered
+    if ($cmd->rowCount() > 0) { # product already registered
       return false;
     } else { # not registered
       $cmd = $this->pdo->prepare("INSERT INTO tb_products (name, price,
@@ -68,6 +68,23 @@ Class Product{
     return $res;
   }
   # update this person's data
-  public function updatePersonData() {}
+  public function updatePersonData($id, $name, $price, $width, $height, $length,
+                                    $dvd, $book) {
+    $cmd = $this->pdo->prepare("UPDATE FROM tb_products SET name = :name,
+                                price = $price, width = $width, height = 
+                                $height, length = $length, dvd = $dvd, book =
+                                $book WHERE id = :id");
+    $cmd->bindValue(":name",$name);
+    $cmd->bindValue(":price",$price);
+    $cmd->bindValue(":width",$width);
+    $cmd->bindValue(":height",$height);
+    $cmd->bindValue(":length",$length);
+    $cmd->bindValue(":dvd",$dvd);
+    $cmd->bindValue(":book",$book);
+    $cmd->bindValue(":id",$id);
+    $cmd->execute();
+
+    return true;
+  } 
 }
 ?>
