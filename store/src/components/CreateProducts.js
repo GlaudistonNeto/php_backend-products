@@ -15,7 +15,7 @@ export const CreateProducts = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post('http://localhost:80/project_products/api/create.php', inputs);
+    axios.post('http://localhost:80/project_products/api/products/create.php', inputs);
     console.log(inputs);
   }
 
