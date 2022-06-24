@@ -1,35 +1,30 @@
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-
-// CSS
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
-
-// components
-import { CreateProducts } from './components/CreateProducts';
-import { DeleteProducts } from './components/DeleteProducts';
-import EditProducts from './components/EditProducts';
-import { ProductsList } from './components/ProductsList';
+import CreateProduct from './components/CreateProduct';
+import EditProduct from './components/EditProduct';
+import ProductList from './components/ProductList';
 
 function App() {
-
   return (
     <div className="App">
-    <h5>List, deletion, edition, and creation of products</h5>
+      <h5>List of products to be edited, deleted, and added new ones</h5>
+
       <BrowserRouter>
         <nav>
           <ul>
             <li>
-              <Link to="/">Products List</Link>
+              <Link to="/">List Products</Link>
             </li>
             <li>
-              <Link to="/product/create">Products Creation</Link>
+              <Link to="product/create">Create Product</Link>
             </li>
           </ul>
-          <Routes>
-            <Route index element={<ProductsList />} />
-            <Route path='product/create' element={<CreateProducts />} />
-            <Route path='product/edit' element={<EditProducts />} />
-          </Routes>
         </nav>
+        <Routes>
+          <Route index element={<ProductList />} />
+          <Route path="product/create" element={<CreateProduct />} />
+          <Route path="product/:id/edit" element={<EditProduct />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
